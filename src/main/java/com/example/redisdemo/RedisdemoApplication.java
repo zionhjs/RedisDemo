@@ -17,6 +17,7 @@ public class RedisdemoApplication {
 	@Bean
 	RedisTemplate<String, User> redisTemplate(){
 		RedisTemplate<String, User> redisTemplate = new RedisTemplate<String, User>();
+		// inject the jedisConnectionFactory here:
 		redisTemplate.setConnectionFactory(jedisConnectionFactory());
 		return redisTemplate;
 	}
